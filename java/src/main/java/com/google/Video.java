@@ -30,4 +30,13 @@ class Video {
   List<String> getTags() {
     return tags;
   }
+
+  /** Returns a readonly collection of the tags of the video. */
+  public String toString() {
+    return String.format("%s (%s) [%s]",
+            title,
+            videoId,
+            String.join(" ",tags)
+    );
+  }
 }
